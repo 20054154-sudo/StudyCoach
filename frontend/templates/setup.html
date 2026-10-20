@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Nuova sessione · Study Coach{% endblock %}
+{% block content %}
+<nav class="breadcrumbs" aria-label="Percorso"><a href="/web/exams">I tuoi esami</a><span>/</span><a href="/web/exams/{{ exam.id }}">{{ exam.name }}</a><span>/</span><span aria-current="page">Nuova sessione</span></nav>
+<section class="page-hero compact-hero"><div><span class="eyebrow">PERCORSO GUIDATO</span><h1>Prepara la sessione</h1><p>Il tutor creerà domande usando soltanto le {{ ids|length }} fonti che hai selezionato.</p></div></section>
+<div class="setup-layout"><section class="panel setup-card"><div class="section-heading compact"><div><span class="eyebrow">ULTIMO PASSO</span><h2>Scegli il ritmo</h2></div><span class="round-icon" aria-hidden="true">?</span></div><form method="post" action="/web/exams/{{ exam.id }}/study" class="form-stack" data-operation="quiz">{% for id in ids %}<input type="hidden" name="material_ids" value="{{ id }}">{% endfor %}<label for="n_questions">Numero di domande</label><input id="n_questions" type="number" name="n_questions" min="3" max="10" value="5" required><p class="field-hint">Da 3 a 10 domande. Potrai ragionare due volte su ciascuna risposta.</p><button class="button button-primary" type="submit">Genera domande e inizia <span aria-hidden="true">→</span></button><p class="muted small">La generazione può richiedere alcuni minuti.</p></form></section><aside class="panel setup-aside"><h2>Come funziona</h2><ol><li>Rispondi alla domanda.</li><li>Il tutor ti guida con uno spunto.</li><li>Integra la risposta e ricevi una valutazione.</li></ol><a class="text-link" href="/web/exams/{{ exam.id }}">← Cambia le fonti</a></aside></div>
+<script defer src="/static/operation-progress.js?v={{ operation_script_version }}"></script>
+{% endblock %}
+

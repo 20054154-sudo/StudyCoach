@@ -1,0 +1,5 @@
+PROBABILITÀ E STATISTICA
+
+Pagina 1. La media campionaria converge alla media vera per la legge dei grandi numeri.
+Pagina 2. Varianza = E[(X-mu)^2]. Deviazione standard = radice quadrata della varianza.
+Pagina 3. Tabella: evento indipendente -> P(A e B)=P(A)P(B); evento incompatibile -> P(A o B)=P(A)+P(B).

@@ -1,0 +1,1 @@
+{"id":"K3.2-out-01","category":"fuori_materiale","reference":{"file":"materials/analisi_calcolo.txt","sha256":"8C2371EF808E4A24191C47985C37029093671481D08E1897912A49431B46D2B1","pages":[1,2,3]},"input":{"query":"Spiega la relatività generale."},"expected":{"answer":"Non supportato dal materiale","cited_pages":[]},"obtained":null,"outcome":"ok","comment":"Fuori materiale."}

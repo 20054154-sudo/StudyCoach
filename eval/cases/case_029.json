@@ -1,0 +1,1 @@
+{"id":"K3.2-retrieval-01","category":"retrieval","reference":{"file":"materials/analisi_calcolo.txt","sha256":"8C2371EF808E4A24191C47985C37029093671481D08E1897912A49431B46D2B1","pages":[1]},"input":{"query":"formula derivata","expected_page":1},"expected":{"answer":"limite del rapporto incrementale","cited_pages":[1]},"obtained":null,"outcome":"ok","comment":"Hit@k."}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+  <title>Study Coach</title>
+  <rect width="64" height="64" rx="16" fill="#263b2c"/>
+  <path d="M13 21c7-2 13 0 19 4v25c-6-4-12-6-19-4V21Z" fill="#bdd5bf"/>
+  <path d="M32 25c6-4 12-6 19-4v25c-7-2-13 0-19 4V25Z" fill="#e8eee9"/>
+  <path d="M32 26v23M19 29l7 3M19 36l7 3M38 32l7-3M38 39l7-3" stroke="#263b2c" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="m44 6 2.5 6.5L53 15l-6.5 2.5L44 24l-2.5-6.5L35 15l6.5-2.5L44 6Z" fill="#bdd5bf" stroke="#263b2c" stroke-width="2" stroke-linejoin="round"/>
+</svg>

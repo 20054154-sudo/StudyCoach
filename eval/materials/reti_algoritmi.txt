@@ -1,0 +1,5 @@
+RETI E ALGORITMI
+
+Pagina 1. Una coda FIFO estrae gli elementi nell'ordine di inserimento; una pila LIFO estrae l'ultimo inserito.
+Pagina 2. BFS visita per livelli e usa una coda; DFS esplora in profondità e usa pila o ricorsione.
+Pagina 3. La complessità di binary search è O(log n), mentre una scansione lineare è O(n).

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>{% block title %}Study Coach{% endblock %}</title>
+  <link rel="icon" href="/static/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Vai al contenuto</a>
+  {% if user %}
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="/web/exams"><img src="/static/logo.svg" alt=""><span>Study Coach<small>Il tuo spazio di studio</small></span></a>
+      <nav class="main-nav" aria-label="Navigazione principale">
+        <a href="/web/exams" {% if request.url.path.startswith('/web/exams') %}aria-current="page"{% endif %}>Esami</a>
+        <a href="/web/history" {% if request.url.path.startswith('/web/history') %}aria-current="page"{% endif %}>Storico</a>
+      </nav>
+      <div class="account"><span class="avatar" aria-hidden="true">{{ user.username[:1]|upper }}</span><span class="account-name">{{ user.username }}</span><form method="post" action="/web/logout"><button class="button button-quiet" type="submit">Esci</button></form></div>
+    </div>
+  </header>
+  {% endif %}
+  <main id="main" class="shell page {% if not user %}auth-page{% endif %}">
+    {% if error %}<div class="alert alert-error" role="alert"><strong>Operazione non riuscita</strong><span>{{ error }}</span></div>{% endif %}
+    {% if ok %}<div class="alert alert-success" role="status"><strong>Fatto</strong><span>{{ ok }}</span></div>{% endif %}
+    {% block content %}{% endblock %}
+  </main>
+  {% if user %}<footer class="site-footer"><div class="shell">Study Coach <span aria-hidden="true">·</span> Studia con metodo, una domanda alla volta.</div></footer>{% endif %}
+</body>
+</html>

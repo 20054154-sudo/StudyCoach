@@ -1,0 +1,7 @@
+ANALISI 1 — FORMULE E TABELLA
+
+Pagina 1. La derivata di f in x0 è il limite [f(x0+h)-f(x0)]/h per h che tende a zero.
+Pagina 2. Il teorema fondamentale collega derivazione e integrazione: se F'=f,
+allora l'integrale da a a b di f è F(b)-F(a).
+Pagina 3. Tabella: limite finito -> continuità; derivata positiva -> funzione crescente;
+derivata negativa -> funzione decrescente.

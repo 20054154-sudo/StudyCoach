@@ -1,0 +1,1 @@
+{"id":"K3.2-out-03","category":"fuori_materiale","reference":{"file":"materials/reti_algoritmi.txt","sha256":"018CB9C353D2ADBEDF336339D11ED7A38A4DAC3C7391339EB2F8077D8E418A0E","pages":[1,2,3]},"input":{"query":"Dimostra il teorema di Bayes."},"expected":{"answer":"Non supportato","cited_pages":[]},"obtained":null,"outcome":"ok","comment":"Fuori materiale."}

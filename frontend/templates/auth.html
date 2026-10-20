@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}{{ 'Registrati' if auth_mode == 'register' else 'Accedi' }} · Study Coach{% endblock %}
+{% block content %}
+<div class="auth-layout">
+  <section class="auth-story">
+    <a class="brand auth-brand" href="/"><img src="/static/logo.svg" alt=""><span>Study Coach<small>Il tuo spazio di studio</small></span></a>
+    <div class="auth-copy"><span class="eyebrow">UN PERCORSO SU MISURA</span><h1>Studiare meglio inizia da una buona domanda.</h1><p>Organizza i tuoi PDF, ragiona con il tutor e segui i progressi. Tutto nello stesso spazio.</p></div>
+    <div class="auth-highlights"><div><strong>01</strong><span>Le tue fonti</span></div><div><strong>02</strong><span>Domande guidate</span></div><div><strong>03</strong><span>Progressi chiari</span></div></div>
+  </section>
+  <div class="auth-forms">
+    {% if auth_mode == 'register' %}
+    <section class="panel auth-card"><span class="eyebrow">INIZIA QUI</span><h2>Registrati</h2><p class="muted">Crea il tuo spazio di studio.</p><form method="post" action="/web/register" class="form-stack"><label for="register-name">Username</label><input id="register-name" name="username" minlength="3" maxlength="50" autocomplete="username" required><label for="register-email">Email</label><input id="register-email" name="email" type="email" maxlength="320" autocomplete="email" required><label for="register-password">Password <span class="label-hint">Almeno 6 caratteri</span></label><input id="register-password" name="password" type="password" minlength="6" autocomplete="new-password" required><label for="register-password-confirm">Conferma password</label><input id="register-password-confirm" name="password_confirm" type="password" minlength="6" autocomplete="new-password" required><button class="button button-primary" type="submit">Crea account <span aria-hidden="true">→</span></button></form><p class="auth-switch">Hai già un account? <a href="/web/login">Accedi</a></p></section>
+    {% else %}
+    <section class="panel auth-card"><span class="eyebrow">BENTORNATO</span><h2>Accedi</h2><p class="muted">Riprendi esattamente da dove eri rimasto.</p><form method="post" action="/web/login" class="form-stack"><label for="login-name">Username</label><input id="login-name" name="username" autocomplete="username" required><label for="login-password">Password</label><input id="login-password" name="password" type="password" autocomplete="current-password" required><button class="button button-primary" type="submit">Accedi <span aria-hidden="true">→</span></button></form><p class="auth-switch">Non hai un account? <a href="/web/register">Registrati</a></p></section>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
+
